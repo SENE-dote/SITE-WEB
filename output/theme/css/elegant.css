@@ -1,0 +1,6 @@
+body {
+    background-image: url('../static/image/Gemini_Generated_Image_6z2p2h6z2p2h6z2p.jpg'); /* Chemin relatif depuis le CSS */
+    background-size: cover; /* Pour que l'image couvre tout l'arrière-plan */
+    background-repeat: no-repeat; /* Pour éviter la répétition */
+    /* Autres styles de fond (couleur, position, etc.) */
+}
