@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Partagez anonymement votre histoire de cœur brisé ou d'amour sur L'Écho des Cœurs. Lisez les témoignages poignants d'autres âmes.">
+    <meta name="keywords" content="témoignages anonymes, histoires de cœur brisé, histoires d'amour, partage d'histoires, communauté">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vos Témoignages Anonymes - L'Écho des Cœurs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">L'Écho des Cœurs</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="histoires-romantiques.html">Histoires Romantiques</a></li>
+                <li><a href="histoires-sombres.html">Histoires de Souffrance</a></li>
+                <li><a href="vos-temoignages.html">Vos Témoignages Anonymes</a></li>
+                <li><a href="auteurs-contemporains.html">Auteurs Contemporains</a></li>
+                <li><a href="soumissions.html">Vos Créations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="temoignages-anonymes">
+            <h1>Partagez vos Histoires en Toute Anonymité</h1>
+            <p>Ici, vous pouvez partager vos récits de romance, vos moments de souffrance et vos expériences mélancoliques sans révéler votre identité. Laissez vos mots trouver un écho auprès d'une communauté compréhensive.</p>
+
+            <div id="soumettre-temoignage">
+                <h2>Partager votre histoire</h2>
+                <form id="form-temoignage">
+                    <div>
+                        <label for="titre-temoignage">Titre de votre histoire (optionnel) :</label>
+                        <input type="text" id="titre-temoignage" name="titre-temoignage">
+                    </div>
+                    <div>
+                        <label for="contenu-temoignage">Votre témoignage :</label>
+                        <textarea id="contenu-temoignage" name="contenu-temoignage" rows="10" required></textarea>
+                    </div>
+                    <button type="submit">Soumettre anonymement</button>
+                    <p class="info-anonymat">Votre nom ou toute information personnelle ne seront pas enregistrés lors de la soumission.</p>
+                </form>
+            </div>
+
+            <div id="liste-temoignages">
+    <h2>Les histoires partagées :</h2>
+    <article class="temoignage">
+        <h3>Un amour inattendu</h3>
+        <p>Je ne m'attendais pas à le trouver là, au coin de cette rue pluvieuse. Nos parapluies se sont heurtés, nos regards se sont croisés, et le reste appartient à l'histoire...</p>
+    </article>
+    <article class="temoignage">
+        <h3>La perte d'un être cher</h3>
+        <p>Les jours sont longs et les nuits encore plus. Son absence est un vide que rien ne semble pouvoir combler. Mais je garde précieusement les souvenirs...</p>
+    </article>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 L'Écho des Cœurs</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Soumettez vos propres histoires romantiques ou poèmes de souffrance à L'Écho des Cœurs et partagez votre créativité avec notre communauté.">
+    <meta name="keywords" content="soumission histoires, soumission poèmes, écrire, partager ses créations, communauté littéraire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vos Créations - L'Écho des Cœurs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">L'Écho des Cœurs</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="histoires-romantiques.html">Histoires Romantiques</a></li>
+                <li><a href="histoires-sombres.html">Histoires de Souffrance</a></li>
+                <li><a href="vos-temoignages.html">Vos Témoignages Anonymes</a></li>
+                <li><a href="auteurs-contemporains.html">Auteurs Contemporains</a></li>
+                <li><a href="soumissions.html">Vos Créations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Partagez Vos Créations</h1>
+        <p>Soumettez vos poèmes et récits romantiques pour les partager avec notre communauté.</p>
+
+        <form id="form-soumission">
+            <div>
+                <label for="titre-oeuvre">Titre de l'œuvre :</label>
+                <input type="text" id="titre-oeuvre" name="titre-oeuvre" required>
+            </div>
+            <div>
+                <label for="auteur-oeuvre">Votre nom (ou pseudonyme) :</label>
+                <input type="text" id="auteur-oeuvre" name="auteur-oeuvre" required>
+            </div>
+            <div>
+                <label for="type-oeuvre">Type d'œuvre :</label>
+                <select id="type-oeuvre" name="type-oeuvre">
+                    <option value="poeme">Poème</option>
+                    <option value="recit">Récit</option>
+                </select>
+            </div>
+            <div>
+                <label for="contenu-oeuvre">Votre œuvre :</label>
+                <textarea id="contenu-oeuvre" name="contenu-oeuvre" rows="15" required></textarea>
+            </div>
+            <button type="submit">Soumettre votre création</button>
+            <p class="info-soumission">Nous examinerons votre soumission et la publierons si elle correspond à l'esprit du site.</p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 L'Écho des Cœurs</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
