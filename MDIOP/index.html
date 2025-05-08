@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNBEATS - L'Accueil qui Grooove !</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-y: scroll;
+        }
+
+        nav {
+            background-color: red;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00ff00;
+        }
+
+        .accueil-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 60px - 60px); /* Ajuster pour l'en-tête et le footer */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .fun-title {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            animation: wobble 1s infinite alternate;
+        }
+
+        @keyframes wobble {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-10px) rotate(-5deg);
+            }
+            75% {
+                transform: translateX(10px) rotate(5deg);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .photo-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .photo-box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .photo-box:hover img {
+            transform: scale(1.1) rotate(360deg); /* Motion + Flippant (rotation complète) */
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+        .photo-box:hover .text-overlay {
+            opacity: 1;
+        }
+
+        .dancing-text {
+            font-size: 1.5em;
+            color: #00ff00;
+            margin-bottom: 30px;
+            animation: dance 0.8s infinite alternate;
+        }
+
+        @keyframes dance {
+            0% {
+                transform: translateY(0) rotate(-2deg);
+            }
+            100% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+        }
+
+        .fun-fact {
+            font-size: 1.1em;
+            font-style: italic;
+            color: yellow;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            margin-bottom: 15px;
+        }
+
+        .fun-fact.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.9em;
+        }
+
+        header p span {
+            /* Styles pour les couleurs sont appliquées en ligne */
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; padding: 30px; display: flex; align-items: center; justify-content: center;">
+    <img src="images/logo.png" alt="Logo Gauche" style="height: 30px; margin-right: 15px;">
+    <h1 style="margin-bottom: 5px;">SNBEATS</h1>
+    <img src="images/logo.png" alt="Logo Droite" style="height: 30px; margin-left: 15px;">
+    <p style="font-size: 0.9em;">
+    </p>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="realisations.html">Nos Réalisations</a></li>
+            <li><a href="equipe.html">L'Équipe</a></li>
+            <li><a href="groupe.html">Notre Groupe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+     
+ <div class="scrolling-text-container">
+    <div class="scrolling-text">
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    </div>
+ </div>
+    <div class="accueil-container">
+        <h1 class="fun-title">Préparez-vous à vibrer ! 🎶</h1>
+        <p class="dancing-text">Le rythme est en vous, laissez-le danser !</p>
+        <div class="photo-row">
+            <div class="photo-box">
+                <img src="images/index1.jpg" alt="Photo Fun 1">
+                <div class="text-overlay">Groove Time</div>
+            </div>
+            <div class="photo-box">
+                <img src="images/index.jpg" alt="Photo Fun 2">
+                <div class="text-overlay">Feel the Beat</div>
+            </div>
+            <div class="photo-box">
+                <img src="images/index2.jpg" alt="Photo Fun 3">
+                <div class="text-overlay">Danse avec nous !</div>
+            </div>
+        </div>
+        <p class="fun-fact">Saviez-vous que chaque beat a sa propre histoire à raconter ? Touche la photo pour t'en rendre compte! </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SNBEATS - Senegal Beats</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const funFact = document.querySelector('.fun-fact');
+            setTimeout(() => {
+                funFact.classList.add('show');
+            }, 1000); // Apparition différée du fun fact
+        });
+    </script>
+</body>
+</html>
