@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNBEATS - Services XXL en Folie !</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            /* overflow: hidden; <--- SUPPRIMÉ */
+            position: relative; /* Pour positionner les textes amusants */
+        }
+
+        nav {
+            background-color: red;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00ff00;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200vh; /* AUGMENTER LA HAUTEUR MINIMALE */
+            position: relative;
+            width: 100%;
+            overflow: visible; /* AUTORISER LE DÉPASSEMENT */
+            padding-bottom: 60px; /* Garder l'espace pour le footer */
+        }
+
+        .service-ball {
+            position: absolute;
+            width: 250px; /* Taille augmentée */
+            height: 250px; /* Taille augmentée */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em; /* Taille du texte augmentée */
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .service-ball.active {
+            opacity: 1;
+            transform: scale(1);
+            animation: oscillate 2s infinite alternate;
+        }
+
+        @keyframes oscillate {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                transform: translateY(-30px) scale(1.05); /* Oscillation plus ample */
+            }
+        }
+
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed; /* Afficher le footer en bas */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9em;
+            z-index: 20; /* Pour être au-dessus des textes amusants */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.9em;
+        }
+
+        header p span {
+            /* Styles pour les couleurs sont appliquées en ligne */
+        }
+
+        .fun-text-float {
+            position: absolute;
+            font-size: 1.1em;
+            color: lime;
+            font-style: italic;
+            opacity: 0.7;
+            animation: floatAround 10s linear infinite; /* Animation de déplacement */
+            user-select: none; /* Empêcher la sélection du texte */
+            pointer-events: none; /* Empêcher d'interférer avec les clics */
+        }
+
+        @keyframes floatAround {
+            0% {
+                transform: translate(calc(10vw), calc(10vh));
+                opacity: 0.7;
+            }
+            25% {
+                transform: translate(calc(80vw), calc(20vh));
+                opacity: 0.9;
+            }
+            50% {
+                transform: translate(calc(20vw), calc(70vh));
+                opacity: 0.6;
+            }
+            75% {
+                transform: translate(calc(90vw), calc(50vh));
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(calc(10vw), calc(10vh));
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; padding: 30px; display: flex; align-items: center; justify-content: center;">
+    <img src="images/logo.png" alt="Logo Gauche" style="height: 30px; margin-right: 15px;">
+    <h1 style="margin-bottom: 5px;">SNBEATS</h1>
+    <img src="images/logo.png" alt="Logo Droite" style="height: 30px; margin-left: 15px;">
+    <p style="font-size: 0.9em;">
+    </p>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="realisations.html">Nos Réalisations</a></li>
+            <li><a href="equipe.html">L'Équipe</a></li>
+            <li><a href="groupe.html">Notre Groupe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="scrolling-text-container">
+    <div class="scrolling-text">
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    </div>
+ </div>
+    <div class="services-container">
+        </div>
+
+    <footer>
+        <p>&copy; 2025 SNBEATS - Senegal Beats</p>
+    </footer>
+
+    <script>
+        const services = [
+            "PRISES DE VOIX",
+            "MIXAGES & MASTERING",
+            "VOIX OFF & DOUBLAGES",
+            "PRODUCTIONS MUSICALES (MAO)",
+            "TOPLINES & LYRICS",
+            "VIDEOS",
+            "COULEURS MÉDIATIQUES",
+            "EVENEMENTIELS"
+        ];
+
+        const colors = ["#FF6B6B", "#F4D03F", "#36D1DC", "#4ECDC4", "#F7CE68", "#A29BFE", "#78E08F", "#F97F51"];
+        const funTexts = ["Super Sons !", "Ambiance Garantie !", "Le Beat Ultime !", "Faites Confiance !", "Qualité Pro !", "Laissez-vous Emporter !", "Rythmes Enivrants !", "Contactez-nous Vite !"];
+        const container = document.querySelector('.services-container');
+        const body = document.body;
+        let currentIndex = 0;
+        let activeBall = null;
+
+        function createBall(service, colorIndex) {
+            const ball = document.createElement('div');
+            ball.classList.add('service-ball');
+            ball.textContent = service;
+            ball.style.backgroundColor = colors[colorIndex % colors.length];
+            ball.style.left = `${(container.offsetWidth - 250) / 2}px`; // Centrage horizontal
+            ball.style.top = `${(container.offsetHeight - 250) / 2 * 0.7}px`; // CENTRAGE VERTICAL LÉGÈREMENT VERS LE HAUT
+            container.appendChild(ball);
+            return ball;
+        }
+
+        function showNextService() {
+            if (activeBall) {
+                activeBall.classList.remove('active');
+                setTimeout(() => {
+                    activeBall.remove();
+                    if (currentIndex < services.length) {
+                        activeBall = createBall(services[currentIndex], currentIndex);
+                        setTimeout(() => {
+                            activeBall.classList.add('active');
+                            currentIndex++;
+                            if (currentIndex <= services.length) {
+                                setTimeout(showNextService, 3000);
+                            }
+                        }, 100);
+                    }
+                }, 500);
+            } else if (currentIndex < services.length) {
+                activeBall = createBall(services[currentIndex], currentIndex);
+                setTimeout(() => {
+                    activeBall.classList.add('active');
+                    currentIndex++;
+                    if (currentIndex <= services.length) {
+                        setTimeout(showNextService, 3000);
+                    }
+                }, 100);
+            }
+        }
+
+        function createFunText() {
+            const text = document.createElement('div');
+            text.classList.add('fun-text-float');
+            text.textContent = funTexts[Math.floor(Math.random() * funTexts.length)];
+            const startX = Math.random() * 100;
+            const startY = Math.random() * 100;
+            text.style.left = `${startX}vw`;
+            text.style.top = `${startY}vh`;
+            text.style.animationDuration = `${Math.random() * 15 + 8}s`; // Durée aléatoire
+            text.style.animationDelay = `-${Math.random() * 5}s`; // Délai aléatoire pour un démarrage échelonné
+            body.appendChild(text);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Démarrer l'animation des services
+            if (services.length > 0) {
+                showNextService();
+            }
+
+            // Créer plusieurs textes amusants qui flottent
+            for (let i = 0; i < 10; i++) { // Ajustez le nombre de textes flottants ici
+                createFunText();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            // Recentrer la boule active si la fenêtre est redimensionnée
+            if (activeBall) {
+                activeBall.style.left = `${(container.offsetWidth - 250) / 2}px`;
+                activeBall.style.top = `${(container.offsetHeight - 250) / 2 * 0.7}px`;
+            }
+        });
+    </script>
+</body>
+</html>

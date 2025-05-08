@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNBEATS - L'Équipe</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-y: scroll;
+        }
+
+        nav {
+            background-color: red;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00ff00;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Alignement centré des cartes */
+            padding: 30px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .member-card {
+            background-color: #333;
+            border-radius: 8px;
+            margin: 20px;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px; /* Nécessaire pour l'effet de flip 3D */
+        }
+
+        .member-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .member-card:hover .member-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .member-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Cache la face arrière lorsqu'elle n'est pas visible */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .member-face-front {
+            background-color: #444;
+            color: white;
+        }
+
+        .member-face-front img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .member-face-front h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .member-face-back {
+            background-color: #555;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 20px;
+            text-align: center;
+            overflow-y: auto; /* Permet le défilement si le texte est long */
+        }
+
+        .member-face-back h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.9em;
+        }
+
+        header p span {
+            /* Styles pour les couleurs sont appliquées en ligne */
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; padding: 20px; display: flex; align-items: center; justify-content: center;">
+    <img src="images/logo.png" alt="Logo Gauche" style="height: 30px; margin-right: 15px;">
+    <h1 style="margin-bottom: 5px;">SNBEATS</h1>
+    <img src="images/logo.png" alt="Logo Droite" style="height: 30px; margin-left: 15px;">
+    <p style="font-size: 0.9em;">
+    </p>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="realisations.html">Nos Réalisations</a></li>
+            <li><a href="equipe.html">L'Équipe</a></li>
+            <li><a href="groupe.html">Notre Groupe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="scrolling-text-container">
+    <div class="scrolling-text">
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    </div>
+ </div>
+    <div class="team-container">
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/maj.jpg" alt="Membre">
+                    <h3>SENE Madjiguene Doté</h3>
+                    <p>Informaticienne</p>
+                </div>
+                <div class="member-face member-face-back">
+                    <h4>Parcours de SENE Madjiguene Doté</h4>
+                    <p>Fort d'un solide parcours académique en informatique, avec une spécialisation pointue en cybersécurité et science des données, et titulaire de deux licences en mathématiques (fondamentale et statistique) obtenues respectivement à l'Université Paris 5 et à l'Université de Rennes, j'exerce actuellement en tant que Data Scientist chez Eurosmart. Mon cursus universitaire m'a conduit à travers l'Université Paris 8, après un passage par l'Université Assane Seck de Ziguinchor pour une licence en MPI et par l'Université  Cheikh Anta Diop pour un master en géométrie. Mon parcours scolaire initial s'est déroulé au Sénégal, avec l'obtention du baccalauréat à Kaolack. Avant de me consacrer pleinement à la science des données, j'ai acquis une expérience professionnelle diversifiée dans les secteurs de la restauration événementielle et en tant que chargé d'accueil téléphonique.</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/ange.jpg" alt="Membre">
+                    <h3>Ange OmariO </h3>
+                    <p>Directeur artistique</p>
+                </div>
+                <div class="member-face member-face-back">
+                    <h4>Parcours de Ange OmariO </h4>
+                    <p>Ange OmariO est un artiste auteur-compositeur-interprète, topliner et directeur artistique engagé, alliant passion musicale et dévouement humanitaire. Fort d'une carrière marquée par des collaborations avec des artistes comme Viviane Chidid N'Dour, il possède une solide expérience musicale. En parallèle, son engagement social se manifeste à travers des actions communautaires et une participation à des campagnes de sensibilisation sur la santé, notamment avec l’OIM en 2013 pour lutter contre le VIH/SIDA. Convaincu que son parcours artistique et humanitaire fait de lui un candidat idéal, il souhaite contribuer à un EP sur la santé reproductive alliant qualité musicale et message </p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/M1.png" alt="Membre">
+                    <h3>Ndeye Bineta Mané</h3>
+                    <p>Responsable Marketing</p>
+                </div>
+                <div class="member-face member-face-back">
+                    <h4>Parcours de Ndeye Bineta Mané</h4>
+                    <p>Professionnelle expérimentée, elle occupe un poste à responsabilité dans un programme axé sur la santé et la reproduction. En parallèle, elle est fondatrice et directrice d'une agence de marketing, communication et événementiel, spécialisée dans les stratégies de marque et l'organisation d'événements institutionnels et culturels. Elle possède également de l'expérience dans le secteur culturel, en gestion d'artistes et de chargés de relations presse..</p>
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/diop.jpeg" alt="Membre 2">
+                    <h3>Moustapha DIOP</h3>
+                    <p>FONDATEUR</p>
+                </div>
+                <div class="member-face member-face-back">
+                    <h4>Parcours de Moustapha diop</h4>
+                    <p>Moustapha Diop, alias El Maestro le Kangham, est un artiste polyvalent sénégalais, né à Diourbel. Passionné par la musique dès son jeune âge, il a étudié à l'École Nationale des Arts du Sénégal. Chanteur talentueux, beatmaker et auteur-compositeur prolifique, il a marqué l'industrie musicale sénégalaise et a fondé le studio de production SNBEATS, qu'il dirige en tant que fondateur et ingénieur du son. Il excelle dans l'art de la topline et l'écriture de paroles percutantes, cumulant des millions de vues et participant activement à l'évolution de la scène urbaine sénégalaise. Figure emblématique, il continue de repousser les limites de la créativité et de l'excellence.</p>
+                </div>
+            </div>
+        </div>
+    
+                    
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/soun.jpg" alt="Membre 2">
+                    <h3>Ahmed SY</h3>
+                    <p>Videaste & Realisateur</p>
+                </div>
+                <div class="member-face member-face-back"> 
+                    <h4>Parcours de Ahmed SY</h4>   
+                    <p>je suis un vidéaste polyvalent passionné par la création de contenus visuels et sonores percutants. J'ai des compétences en photographie, pilotage de drone, cadrage et montage, ce qui me permet de raconter des histoires avec style et créativité. J'ai travaillé pour l'Organisation Mondiale de la Santé, Klty Entertainment et Freemind Prod, et je collabore actuellement avec plusieurs productions, toujours à la recherche de nouvelles idées à concrétiser.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/amana.png" alt="Membre 3">
+                    <h3>Amadou Faye Sagna (Amana)</h3>
+                    <p>Directeur Artistique</p>
+                </div>
+                <div class="member-face member-face-back">
+                    <h4>Parcours de Amadou Faye Sagna</h4>
+                    <p>Artiste, compositeur, arrangeur et directeur artistique passionné par l'émotion que transmet la musique. Il met son savoir-faire au service de projets artistiques exigeants, alliant sensibilité, innovation et excellence sonore. Son parcours l'a mené à développer une expertise solide en tant que conseiller commercial et chef de projet polyvalent, avec une vision globale de la création à la mise en marché.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/gars2.png" alt="Membre 4">
+                    <h3>El Hadji Mouhamadou Ngom</h3>
+                    <p>Directeur commercial</p>
+                </div>
+                <div class="member-face member-face-back">
+                    <h4>Parcours de ElHadji Mahoua Ngom</h4>
+                    <p>Son parcours professionnel dans le monde artistique lui a permis de développer une forte sensibilité créative et une connaissance pointue de l'univers musical. Son champ d'action s'étend de la direction artistique à l'accompagnement des artistes dans la structuration et la mise en valeur de leurs projets. Fort de ses expériences, il a évolué vers des fonctions de conseiller artistique et de manager, mettant ses compétences au service d'artistes mais aussi d'équipes commerciales.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-card-inner">
+                <div class="member-face member-face-front">
+                    <img src="images/rts.png" alt="Membre 5">
+                    <h3>Mina Khatab</h3>
+                    <p>Chargée de Communication</p>
+                </div>
+                <div class="member-face member-face-back">
+                    <h4>Parcours de Mina Khatab</h4>
+                    <p>Journaliste de formation, elle a débuté sa carrière à Seneweb avant de collaborer avec plusieurs artistes renommés. Elle a également travaillé chez Didiery Ngond, où elle était chargée de la communication, renforçant son expérience dans le journalisme en ligne. Actuellement, elle travaille à RTS, la chaîne nationale, et est responsable de la communication de SNBEATS, où elle allie stratégie, créativité et ancrage dans l'univers musical.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SNBEATS - Senegal Beats</p>
+    </footer>
+</body>
+</html>

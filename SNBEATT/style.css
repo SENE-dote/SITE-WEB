@@ -1,0 +1,94 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    line-height: 1.6;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 1000px; /* Essayez cette valeur et ajustez-la au besoin */
+}
+
+.carousel-slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* La hauteur s'ajustera automatiquement */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Fond semi-transparent pour le texte */
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.slide-content p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+.scrolling-text-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 20s linear infinite;
+    font-size: 1.1em;
+    background: linear-gradient(to right, #00ff00, #ffff00, #ff0000, #0000ff, #00ff00); /* Dégradé multicolore */
+    -webkit-background-clip: text; /* Important pour le dégradé sur le texte */
+    -webkit-text-fill-color: transparent; /* Important pour le dégradé sur le texte */
+    background-size: 500% 100%; /* Ajuster pour que le dégradé couvre tout le texte */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%);
+        background-position: 0% 0%; /* Position initiale du dégradé */
+    }
+    100% {
+        transform: translateX(-100%);
+        background-position: 100% 0%; /* Position finale du dégradé */
+    }
+}  
+footer {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Assurez-vous que ce n'interfère pas avec d'autres positionnements */
+    width: 100%;
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    font-size: 0.9em;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNBEATS - Contactez-nous !</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-y: scroll;
+        }
+
+        nav {
+            background-color: red;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00ff00;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 60px - 60px); /* Ajuster pour l'en-tête et le footer */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 2em;
+            margin-bottom: 30px;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        .social-links {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px; /* Réduire un peu la marge pour la nouvelle section */
+        }
+
+        .social-link {
+            background-color: #333;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex; /* Pour aligner l'image et le texte */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-link img {
+            width: 30px; /* Taille des logos */
+            height: 30px;
+            margin-right: 10px; /* Espacement entre le logo et le texte */
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .whatsapp-link {
+            background-color: #25D366; /* Couleur WhatsApp */
+        }
+
+        .facebook-link {
+            background-color: #1877F2; /* Couleur Facebook */
+        }
+
+        .instagram-link {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); /* Couleurs Instagram */
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #00ff00;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .contact-details a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .contact-details a:hover {
+            color: #00ff00;
+        }
+
+        .fun-text {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #00ff00;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fun-text.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.9em;
+        }
+
+        header p span {
+            /* Styles pour les couleurs sont appliquées en ligne */
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; padding: 30px; display: flex; align-items: center; justify-content: center;">
+    <img src="images/logo.png" alt="Logo Gauche" style="height: 30px; margin-right: 15px;">
+    <h1 style="margin-bottom: 5px;">SNBEATS</h1>
+    <img src="images/logo.png" alt="Logo Droite" style="height: 30px; margin-left: 15px;">
+    <p style="font-size: 0.9em;">
+    </p>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="realisations.html">Nos Réalisations</a></li>
+            <li><a href="equipe.html">L'Équipe</a></li>
+            <li><a href="groupe.html">Notre Groupe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="scrolling-text-container">
+    <div class="scrolling-text">
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    🎉 Bienvenue chez SNBEATS ! 🎧 Des sons incroyables vous attendent ! 🎤 Contactez-nous vite ! 🚀 Suivez-nous sur les réseaux ! ✨ 😎🔥🎶
+    </div>
+    </div>
+    <div class="contact-container">
+        <h2 class="contact-title">On est tout ouïe ! 👂</h2>
+        <p class="fun-text">N'hésitez pas à nous laisser un message ou à nous suivre sur nos réseaux préférés ! 👇</p>
+        <div class="social-links">
+            <a href="https://wa.me/+221771616445" target="_blank" class="social-link whatsapp-link">
+                <img src="images/wat.JPG" alt="WhatsApp"> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/share/1ARpz8TbBC/?mibextid=wwXIfr" target="_blank" class="social-link facebook-link">
+                <img src="images/fac.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://www.instagram.com/snbeats.sn?igsh=ZGV2b3cydmN0dTZl" target="_blank" class="social-link instagram-link">
+                <img src="images/ins.JPG" alt="Instagram"> Instagram
+            </a>
+        </div>
+
+        <div class="contact-info">
+            <h3>Ou contactez-nous directement ! 👇</h3>
+            <div class="contact-details">
+                <p>Téléphone : <a href="tel:+221 78 739 30 30">+221 78 739 30 30</a></p>
+                <p>Email : <a href="mailto:elmaestrolekangham@gmail.com">elmaestrolekangham@gmail.com</a></p>
+            </div>
+        </div>
+
+        <p class="fun-text" style="font-size: 0.9em;"> Votre beat préféré n'attend que vous ! 😉</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SNBEATS - Senegal Beats</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const funTexts = document.querySelectorAll('.fun-text');
+            funTexts.forEach((text, index) => {
+                setTimeout(() => {
+                    text.classList.add('show');
+                }, 300 * (index + 1)); // Animation d'apparition séquentielle
+            });
+        });
+    </script>
+</body>
+</html>
